@@ -1,11 +1,11 @@
 {
-  "name": "hypercore-multi-key",
-  "version": "4.0.0",
-  "description": "Function that takes a hypercore and returns a new one that is signed by a new key pair but backed by the same data",
+  "name": "@ddatabase/multi-key",
+  "version": "1.0.0",
+  "description": "Function that takes a dDatabase and returns a new one that's signed by a new keypair but backed by the same data.",
   "main": "index.js",
   "dependencies": {
-    "hypercore": "^9.0.0",
-    "hypercore-crypto": "^2.1.0",
+    "ddatabase": "^10.0.0",
+    "@ddatabase/crypto": "^1.0.0",
     "random-access-memory": "^3.1.1",
     "random-access-storage": "^1.4.0"
   },
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/hypercore-multi-key.git"
+    "url": "https://github.com/dwebprotocol/ddatabase-multi-key.git"
   },
-  "author": "Mathias Buus (@mafintosh)",
+  "author": "PeepsLabs <peepslabs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/hypercore-multi-key/issues"
+    "url": "https://github.com/dwebprotocol/ddatabase-multi-key/issues"
   },
-  "homepage": "https://github.com/mafintosh/hypercore-multi-key"
+  "homepage": "https://dwebx.org"
 }
