@@ -1,5 +1,5 @@
-const crypto = require('hypercore-crypto')
-const hypercore = require('hypercore')
+const crypto = require('@ddatabase/crypto')
+const ddatabase = require('ddatabase')
 const storage = require('./storage')
 
 module.exports = multiKey
@@ -8,7 +8,7 @@ function multiKey (feed, keyPair, opts) {
   if (!keyPair) keyPair = crypto.keyPair()
 
   const key = keyPair.key || keyPair.publicKey
-  const other = hypercore(storage(feed, keyPair), key, opts)
+  const other = ddatabase(storage(feed, keyPair), key, opts)
 
   feed.ready(function () {
     other.ready(function () {

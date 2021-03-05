@@ -1,6 +1,6 @@
 const ras = require('random-access-storage')
 const ram = require('random-access-memory')
-const crypto = require('hypercore-crypto')
+const crypto = require('@ddatabase/crypto')
 
 module.exports = storage
 

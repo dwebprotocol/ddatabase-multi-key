@@ -1,6 +1,6 @@
 const ram = require('random-access-memory')
-const hypercore = require('hypercore')
-const feed = hypercore(ram)
+const ddatabase = require('ddatabase')
+const feed = ddatabase(ram)
 const multiKey = require('./')
 
 feed.append(['a', 'b', 'c'], function () {
@@ -15,7 +15,7 @@ feed.append(['a', 'b', 'c'], function () {
     feed.append('d')
   })
 
-  const clone = hypercore(ram, otherFeed.key)
+  const clone = ddatabase(ram, otherFeed.key)
 
   const stream = otherFeed.replicate(true, { live: true })
   stream.pipe(clone.replicate(false, { live: true })).pipe(stream)
